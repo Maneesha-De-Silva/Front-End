@@ -1,4 +1,4 @@
-import "./product.css";
+import "./employee.css";
 import { DataGrid } from "@material-ui/data-grid";
 import { DeleteOutline } from "@material-ui/icons";
 import { userRows } from "../../dummyData";
@@ -14,10 +14,10 @@ export default function UserList() {
   };
   
   const columns = [
-    { field: "id", headerName: "Product ID", width: 150 },
+    { field: "id", headerName: "ID", width: 90 },
     {
       field: "user",
-      headerName: "Product Name",
+      headerName: "User",
       width: 200,
       renderCell: (params) => {
           
@@ -30,26 +30,26 @@ export default function UserList() {
         );
       },
     },
-    { field: "email", headerName: "Re-Order Level", width: 150 },
+    { field: "email", headerName: "Email", width: 200 },
     {
       field: "status",
-      headerName: "Availability",
-      width: 150,
+      headerName: "Status",
+      width: 120,
     },
     {
       field: "transaction",
-      headerName: "Unit Price",
-      width: 150,
+      headerName: "Transaction Volume",
+      width: 160,
     },
     {
       field: "action",
-      headerName: "action",
+      headerName: "Action",
       width: 150,
       renderCell: (params) => {
         return (
           <>
             <Link to={"/employeeEdit/" + params.row.id}>
-              <button className="userListEdit">Update</button>
+              <button className="userListEdit">Edit</button>
             </Link>
             <DeleteOutline
               className="userListDelete"

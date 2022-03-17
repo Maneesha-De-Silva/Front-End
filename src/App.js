@@ -9,6 +9,10 @@ import Product from "./pages/product/Product";
 import User from "./pages/user/User";
 import ProductList from "./pages/productList/ProductList";
 import NewProduct from "./pages/newProduct/NewProduct";
+import Order from "./pages/order/Order";
+import Employee from "./pages/employee/Employee";
+import EmployeeEdit from "./pages/employeeEdit/EmployeeEdit";
+
 
 function App() {
   return (
@@ -24,6 +28,11 @@ function App() {
           <Route path="/user" element ={<User/>} />
           <Route path="/newProduct" element ={<NewProduct/>} />
           <Route path="/productList" element ={<ProductList/>} />
+          <Route path="/order" element ={<Order/>} />
+          <Route path="/employee" element ={<Employee/>} />
+          <Route path="/employeeEdit" element ={<EmployeeEdit/>} />
+
+
           </Routes>
       </div>
     </Router>
