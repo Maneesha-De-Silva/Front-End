@@ -4,6 +4,7 @@ import { DeleteOutline } from "@material-ui/icons";
 import { productRows } from "../../dummyData";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { Button } from "@material-ui/core";
 
 export default function ProductList() {
   const [data, setData] = useState(productRows);
@@ -11,6 +12,7 @@ export default function ProductList() {
   const handleDelete = (id) => {
     setData(data.filter((item) => item.id !== id));
   };
+
 
   const columns = [
     { field: "id", headerName: "ID", width: 90 },
@@ -43,7 +45,7 @@ export default function ProductList() {
       headerName: "Action",
       width: 150,
       renderCell: (params) => {
-        return (
+        return ( 
           <>
             <Link to={"/product/" + params.row.id}>
               <button className="productListEdit">Edit</button>
@@ -52,7 +54,11 @@ export default function ProductList() {
               className="productListDelete"
               onClick={() => handleDelete(params.row.id)}
             />
+           
           </>
+        
+            
+              
         );
       },
     },

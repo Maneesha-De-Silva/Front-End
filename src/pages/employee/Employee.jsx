@@ -4,9 +4,11 @@ import { DeleteOutline } from "@material-ui/icons";
 import { userRows } from "../../dummyData";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import TopbarEdit from "../../Components/topbaredit/TopbarEdit";
 
 
-export default function UserList() {
+
+export default function Employee() {
   const [data, setData] = useState(userRows);
 
   const handleDelete = (id) => {
@@ -48,9 +50,14 @@ export default function UserList() {
       renderCell: (params) => {
         return (
           <>
-            <Link to={"/employeeEdit/" + params.row.id}>
-              <button className="userListEdit">Edit</button>
-            </Link>
+          <button className="userListEdit"
+    type="button"
+    onClick={(e) => {
+      e.preventDefault();
+      window.location.href='./EmployeeEdit';
+      }}
+> Edit</button>
+           
             <DeleteOutline
               className="userListDelete"
               onClick={() => handleDelete(params.row.id)}
@@ -64,13 +71,15 @@ export default function UserList() {
 
   return (
     <div className="userList">
+      <TopbarEdit/>
       <DataGrid
         rows={data}
-        disableSelectionOnClick
         columns={columns}
         pageSize={8}
         checkboxSelection
       />
     </div>
   );
+
+  
 }

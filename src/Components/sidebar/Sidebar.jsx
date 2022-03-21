@@ -20,72 +20,64 @@ export default function Sidebar() {
     <div className="sidebar">
       <div className="sidebarWrapper">
         <div className="sidebarMenu">
-          <h3 className="sidebarTitle">Dashboard</h3>
           <ul className="sidebarList">
             <Link to="/" className="link">
-            <li className="sidebarListItem active">
+            <li className="sidebarListItem ">
               <LineStyle className="sidebarIcon" />
-              Home
+             Dashboard
             </li>
             </Link>
             <li className="sidebarListItem">
               <Timeline className="sidebarIcon" />
-              Analytics
-            </li>
-            <li className="sidebarListItem">
-              <TrendingUp className="sidebarIcon" />
               Sales
             </li>
-          </ul>
-        </div>
-        <div className="sidebarMenu">
-          <h3 className="sidebarTitle">Quick Menu</h3>
-          <ul className="sidebarList">
-            <Link to="/users" className="link">
-              <li className="sidebarListItem">
-                <PermIdentity className="sidebarIcon" />
-                Users
-              </li>
-            </Link>
-            <Link to="/products" className="link">
-              <li className="sidebarListItem">
-                <Storefront className="sidebarIcon" />
-                Products
-              </li>
-            </Link>
             <Link to="/order" className="link">
-            <li className="sidebarListItem active">
-              <LineStyle className="sidebarIcon" />
+            <li className="sidebarListItem">
+              <TrendingUp className="sidebarIcon" />
               Orders
             </li>
             </Link>
+
+            <div className="sidebarMenu">
+            <Link to="/productList" className="link">
+              <li className="sidebarListItem">
+                <PermIdentity className="sidebarIcon" />
+               Products
+              </li>
+            </Link>
             <Link to="/employee" className="link">
-            <li className="sidebarListItem active">
+            <li className="sidebarListItem ">
               <LineStyle className="sidebarIcon" />
-              Employee
+              Employees
             </li>
             </Link>
+            <Link to="/customer" className="link">
+            <li className="sidebarListItem ">
+              <LineStyle className="sidebarIcon" />
+             Customers
+            </li>
+            </Link>
+
+            <li className="sidebarListItem ">
+              <LineStyle className="sidebarIcon" />
+              Notifications
+            </li>
+           
             <li className="sidebarListItem">
               <BarChart className="sidebarIcon" />
               Reports
             </li>
-          </ul>
         </div>
         <div className="sidebarMenu">
-          <h3 className="sidebarTitle">Notifications</h3>
-          <ul className="sidebarList">
             <li className="sidebarListItem">
               <DynamicFeed className="sidebarIcon" />
               Feedback
             </li>
-            <li className="sidebarListItem">
-              <ChatBubbleOutline className="sidebarIcon" />
-              Messages
-            </li>
+            </div>
           </ul>
+        </div>  
         </div>
-        
-      </div>
-    </div>
+        </div>
+    
   );
 }

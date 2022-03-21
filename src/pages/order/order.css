@@ -6,6 +6,10 @@
     padding: auto;
   }
   
+  .table{
+    align-items: center;
+    
+  }
   .widgetLgTitle {
     font-size: 22px;
     font-weight: 600;
